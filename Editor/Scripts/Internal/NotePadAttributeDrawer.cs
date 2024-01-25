@@ -1,8 +1,4 @@
 #if UNITY_EDITOR
-using System;
-using System.ComponentModel;
-using System.Globalization;
-using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -11,7 +7,7 @@ namespace Editor.Scripts.Internal
 {
 
 [CustomPropertyDrawer(typeof(NotePad))]
-public class NotePadAttributeDrawer : PropertyDrawer
+internal class NotePadAttributeDrawer : PropertyDrawer
 {
     private const string Path = "NotePad/User Interface/NotePad";
 
