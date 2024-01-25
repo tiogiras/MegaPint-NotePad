@@ -8,7 +8,7 @@
     </ui:GroupBox>
     <ui:GroupBox name="Closed" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-direction: column; align-items: stretch; justify-content: space-around;">
         <ui:GroupBox style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-direction: row; align-items: flex-start; justify-content: space-between; -unity-font-style: bold;">
-            <ui:Foldout text="PropertyName" name="Foldout" value="false" style="flex-grow: 1; flex-wrap: nowrap;">
+            <ui:Foldout text="Edit Mode" name="Foldout" value="false" style="flex-grow: 1; flex-wrap: nowrap;">
                 <ui:Label tabindex="-1" text="Notes..." parse-escape-sequences="true" display-tooltip-when-elided="true" name="Notes" style="opacity: 0.66; -unity-font-style: normal;" />
             </ui:Foldout>
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="BTN_Open" style="margin-top: 0; margin-right: 0; background-image: resource(&apos;Edit Icon&apos;); width: 20px; margin-bottom: 0; margin-left: 0; height: 20px;" />
