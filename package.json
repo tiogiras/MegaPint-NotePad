@@ -2,8 +2,11 @@
   "name": "com.tiogiras.megapint-notepad",
   "displayName": "Megapint - NotePad",
   "author": "Tiogiras",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
   "category": "Tools",
-  "description": "NotePad allows you to make and edit notes directly on a GameObjects MonoBehaviour."
+  "description": "NotePad allows you to make and edit notes directly on a GameObjects MonoBehaviour.",
+  "repository": {
+    "url": "https://github.com/tiogiras/MegaPint-NotePad.git"
+  }
 }
