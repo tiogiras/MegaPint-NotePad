@@ -2,7 +2,7 @@
     <Style src="project://database/Packages/com.tiogiras.megapint/Editor/Resources/User%20Interface/MegaPint.uss?fileID=7433441132597879392&amp;guid=2f2b50e0e132e3a4989e6dbb646711fa&amp;type=3#MegaPint" />
     <ui:GroupBox name="Open" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
         <ui:GroupBox style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-direction: row; align-items: flex-start; justify-content: space-between;">
-            <ui:TextField picking-mode="Ignore" label="PropertyName" value="filler text" multiline="true" name="TextInput" style="flex-grow: 1; flex-shrink: 1; flex-direction: column; margin-right: 8px;" />
+            <ui:TextField picking-mode="Ignore" value="filler text" multiline="true" name="TextInput" style="flex-grow: 1; flex-shrink: 1; flex-direction: column; margin-right: 8px;" />
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="BTN_Close" text="Close" style="margin-top: 0; margin-right: 0; background-image: none; width: auto; margin-bottom: 0; margin-left: 0; height: 20px;" />
         </ui:GroupBox>
     </ui:GroupBox>
