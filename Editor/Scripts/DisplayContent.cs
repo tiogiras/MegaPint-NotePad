@@ -1,5 +1,5 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine.UIElements;
+using Editor.Scripts.GUI;
 
 namespace Editor.Scripts
 {
@@ -10,8 +10,28 @@ internal static partial class DisplayContent
 
     // Called by reflection
     // ReSharper disable once UnusedMember.Local
-    // ReSharper disable once UnusedParameter.Local
-    private static void NotePad(VisualElement _) { }
+    private static void NotePad(DisplayContentReferences refs)
+    {
+        InitializeDisplayContent(
+            refs,
+            new TabSettings
+            {
+                info = true,
+                guides = true,
+                help = true
+            },
+            new TabActions
+            {
+                info = root =>
+                {
+                    GUIUtility.ActivateLinks(root, null);
+                },
+                help = root =>
+                {
+                    GUIUtility.ActivateLinks(root, null);
+                }
+            });
+    }
 
     #endregion
 }
