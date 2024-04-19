@@ -3,7 +3,7 @@
     <ui:VisualElement style="flex-grow: 1; margin-left: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; overflow: hidden;">
         <ui:Foldout text="Cannot find &lt;link=&quot;info_notePad&quot;&gt;NotePad&lt;/link&gt;" value="false" class="mp_textColor_normal mp_font mp_link" style="-unity-font-style: bold;">
             <ui:VisualElement style="flex-grow: 1; margin-top: 5px; margin-bottom: 20px;">
-                <Editor.Scripts.GUI.Factories.TextSecondary tabindex="-1" text="The type or namespace name &apos;NotePad&apos; could not be found" style="white-space: normal; -unity-font-style: bold-and-italic;" />
+                <Editor.Scripts.GUI.Factories.TextSecondary tabindex="-1" text="The type or namespace name &apos;NotePad&apos; could not be found" style="white-space: normal; -unity-font-style: bold-and-italic; font-size: 10px;" />
                 <Editor.Scripts.GUI.Factories.Separator />
                 <Editor.Scripts.GUI.Factories.Text tabindex="-1" text="If you are using assembly definitions you need to reference the assembly of the &lt;link=&quot;info_notePad&quot;&gt;NotePad&lt;/link&gt; class in the assembly of your script.&#10;&#10;Select your assembly definition file and press the plus under &lt;b&gt;Assembly Definition References&lt;/b&gt;. Now add the follwing assembly as a reference.&#10;&#10;&lt;b&gt;tiogiras.megapint.notepad.runtime" class="mp_link" style="white-space: normal; -unity-font-style: normal; margin-top: 10px;" />
                 <Editor.Scripts.GUI.Factories.Separator />
