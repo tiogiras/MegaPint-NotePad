@@ -1,9 +1,10 @@
 ﻿#if UNITY_EDITOR
-using Editor.Scripts.GUI;
+using MegaPint.Editor.Scripts.GUI.Utility;
 
-namespace Editor.Scripts
+namespace MegaPint.Editor.Scripts
 {
 
+/// <summary> Partial class used to display the right pane in the BaseWindow </summary>
 internal static partial class DisplayContent
 {
     #region Private Methods
@@ -14,23 +15,8 @@ internal static partial class DisplayContent
     {
         InitializeDisplayContent(
             refs,
-            new TabSettings
-            {
-                info = true,
-                guides = true,
-                help = true
-            },
-            new TabActions
-            {
-                info = root =>
-                {
-                    GUIUtility.ActivateLinks(root, null);
-                },
-                help = root =>
-                {
-                    GUIUtility.ActivateLinks(root, null);
-                }
-            });
+            new TabSettings {info = true, guides = true, help = true},
+            new TabActions {info = root => {root.ActivateLinks(null);}, help = root => {root.ActivateLinks(null);}});
     }
 
     #endregion

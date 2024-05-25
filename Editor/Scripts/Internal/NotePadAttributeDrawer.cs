@@ -2,17 +2,44 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor.Scripts.Internal
+namespace MegaPint.Editor.Scripts.Internal
 {
 
+/// <summary> Drawer of the <see cref="NotePad" /> class </summary>
 [CustomPropertyDrawer(typeof(NotePad))]
 internal class NotePadAttributeDrawer : PropertyDrawer
 {
-    private SerializedProperty _serializedProperty;
-    private SerializedProperty _foldoutProperty;
-    private SerializedProperty _textProperty;
+    private bool _opened
+    {
+        get => _foldoutProperty.boolValue;
+        set
+        {
+            _foldoutProperty.boolValue = value;
+            _serializedProperty.serializedObject.ApplyModifiedProperties();
+        }
+    }
+
+    private string _text
+    {
+        get
+        {
+            var text = _textProperty.stringValue;
+
+            return string.IsNullOrEmpty(text) ? "No notes found!" : text;
+        }
+        set
+        {
+            _textProperty.stringValue = value;
+            _serializedProperty.serializedObject.ApplyModifiedProperties();
+        }
+    }
 
     private bool _editMode;
+    private SerializedProperty _foldoutProperty;
+    private SerializedProperty _serializedProperty;
+    private SerializedProperty _textProperty;
+
+    #region Public Methods
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -24,7 +51,7 @@ internal class NotePadAttributeDrawer : PropertyDrawer
         {
             if (GUILayout.Button("Close", GUILayout.Width(50)))
                 _editMode = false;
-            
+
             _text = EditorGUILayout.TextArea(_text);
         }
         else
@@ -35,7 +62,7 @@ internal class NotePadAttributeDrawer : PropertyDrawer
 
             if (GUILayout.Button("Edit", GUILayout.Width(50)))
                 _editMode = true;
-        
+
             EditorGUILayout.EndHorizontal();
 
             if (!_opened)
@@ -51,29 +78,7 @@ internal class NotePadAttributeDrawer : PropertyDrawer
         }
     }
 
-    private bool _opened
-    {
-        get => _foldoutProperty.boolValue;
-        set
-        {
-            _foldoutProperty.boolValue = value;
-            _serializedProperty.serializedObject.ApplyModifiedProperties();
-        }
-    }
-    
-    private string _text
-    {
-        get
-        {
-            var text = _textProperty.stringValue;
-            return string.IsNullOrEmpty(text) ? "No notes found!" : text;
-        }
-        set
-        {
-            _textProperty.stringValue = value;
-            _serializedProperty.serializedObject.ApplyModifiedProperties();
-        }
-    }
+    #endregion
 }
 
 }
