@@ -1,4 +1,5 @@
 ﻿#if UNITY_EDITOR
+#if UNITY_INCLUDE_TESTS
 using System.Collections;
 using MegaPint.TestScripts;
 using NUnit.Framework;
@@ -46,4 +47,5 @@ public class NotePadTest
 }
 
 }
+#endif
 #endif
