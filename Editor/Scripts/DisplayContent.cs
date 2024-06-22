@@ -1,17 +1,23 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine.UIElements;
+using MegaPint.Editor.Scripts.GUI.Utility;
 
-namespace Editor.Scripts
+namespace MegaPint.Editor.Scripts
 {
 
+/// <summary> Partial class used to display the right pane in the BaseWindow </summary>
 internal static partial class DisplayContent
 {
     #region Private Methods
 
     // Called by reflection
     // ReSharper disable once UnusedMember.Local
-    // ReSharper disable once UnusedParameter.Local
-    private static void NotePad(VisualElement _) { }
+    private static void NotePad(DisplayContentReferences refs)
+    {
+        InitializeDisplayContent(
+            refs,
+            new TabSettings {info = true, guides = true, help = true},
+            new TabActions {info = root => {root.ActivateLinks(null);}, help = root => {root.ActivateLinks(null);}});
+    }
 
     #endregion
 }
