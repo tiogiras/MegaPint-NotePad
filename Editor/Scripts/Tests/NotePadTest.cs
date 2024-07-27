@@ -11,11 +11,11 @@ namespace MegaPint.Editor.Scripts.Tests
 {
 
 /// <summary> NotePad specific unit tests </summary>
-public class NotePadTest
+internal class NotePadTest
 {
     private GameObject _gameObject;
     private NotePadTestMono _notepad;
-    
+
     #region Tests
 
     [Test] [Order(0)]
@@ -34,9 +34,9 @@ public class NotePadTest
         _notepad.notepad.wasFoldout = true;
 
         Selection.activeObject = null;
-        
+
         yield return null;
-        
+
         Selection.activeObject = _gameObject;
 
         Assert.AreEqual(_notepad.notepad.text, "Hello World!");
